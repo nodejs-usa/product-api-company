@@ -6,63 +6,198 @@
 	},
 	"item": [
 		{
-			"name": "localhost:4000/products",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"name\": \"Bici linda\",\n  \"category\": \"Bici\",\n  \"price\": 999.99,\n  \"imgURL\": \"https://ecomovilidad.net/wp-content/uploads/2010/06/BiciCiudad.jpg\"\n}"
+			"name": "Product",
+			"item": [
+				{
+					"name": "localhost:4000/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MAC A1\",\n  \"category\": \"PC\",\n  \"price\": 1199.99,\n  \"imgURL\": \"https://ecomovilidad.net/wp-content/uploads/2010/06/BiciCiudad.jpg\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:4000/products",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"products"
-					]
+				{
+					"name": "localhost:4000/products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:4000/products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/api/products/6060f8b5c89040802b13c162",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"6060f8b5c89040802b13c162"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:4000/products",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"MAC A3\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/products/6060f8b5c89040802b13c162",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"6060f8b5c89040802b13c162"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "localhost:4000/products",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "Auth",
+			"item": [
+				{
+					"name": "localhost:4000/api/auth/signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mfalcon@ynext.cl\",\n    \"password\": \"x1234567890\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:4000/products",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"products"
-					]
+				{
+					"name": "localhost:4000/api/auth/signup Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"marlon\",\n    \"email\": \"mfalcon@ynext.cl\",\n    \"password\": \"x1234567890\"\n}"
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
